@@ -15,14 +15,25 @@
  */
 
 body {
-  background-color: pink;
-  color: white;
+  background-color: #faffd6;
+  color: palevioletred;
   font-size: 1.3em;
   text-align: center;
+  background: url("https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+input[type=text] {
+  background-color: #faffd6;
+  color: palevioletred
+}
+
+input[type=text]:hover {
+  background-color: palevioletred;
+  color: white;
 }
 
 input[type=submit] {
-  background-color: pink;
+  background-color: #faffd6;
   border: none;
   color: palevioletred;
   padding: 15px, 15px;
@@ -30,6 +41,7 @@ input[type=submit] {
   margin: 10px, 10px;
   cursor: pointer;
   font-size: 1.3em;
+  border-radius: 10px;
 }
 
 input[type=submit]:hover {
