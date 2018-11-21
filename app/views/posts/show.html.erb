@@ -1,0 +1,27 @@
+Post-Title: <%= @post.title %>
+<br>
+Post-URL: <%= @post.url %>
+<br>
+Post-Content: <%= @post.content %>
+<br>
+<br>
+<form action="<%= sub_url(@post.sub_id) %>" method="get">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Go back to the sub">
+</form>
+<br>
+<br>
+
+<% if current_user.id == @post.user_id %>
+  <form action="<%= edit_post_url %>" method="get">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" value="Edit Post">
+  </form>
+  <br>
+  <br>
+  <form action="<%= post_url(@post) %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Post">
+  </form>
+<% end %>
